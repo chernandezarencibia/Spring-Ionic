@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Welcome to our shelter!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background">
+
+
+  <!-- <ion-list>
+  <ion-item>
+    <ion-thumbnail slot="end">
+      <img src="../assets/intro.png">
+    </ion-thumbnail>
+    <ion-label>Item Thumbnail</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-thumbnail slot="end">
+      <img src="../assets/intro.png">
+    </ion-thumbnail>
+    <ion-label>Item Thumbnail</ion-label>
+  </ion-item>
+
+
+</ion-list> -->
+
+
+
+
+  <!-- <ion-list>
+      <ion-item>
+        <ion-button>Our family is here!</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button>Our family is here!</ion-button>
+      </ion-item>
+    </ion-list> -->
+
+
+
+
+
+  <ion-list>
+    <ion-item *ngFor="let dog of dogs">
+      <ion-thumbnail id="algo" slot="end">
+        <img src={{dog.image}}>
+      </ion-thumbnail>
+      <ion-label>{{dog.id}},{{dog.name}}, {{dog.breed}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button id="getDogsButton" (click)="this.getAllDogs()">See the whole family!</ion-button>
+  <ion-button (click)="openActionSheet()">Open Actions</ion-button>
+
+</ion-content>

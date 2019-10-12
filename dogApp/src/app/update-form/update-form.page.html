@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Update dog</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  
+    <ion-list>
+
+        <ion-item>
+          <ion-label position="stacked">Name</ion-label>
+          <ion-input required type="text" id="updatedName"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Breed</ion-label>
+          <ion-select id="breed">
+            <ion-select-option value="Chihuahua">Chihuahua</ion-select-option>
+            <ion-select-option value="Chow Chow">Chow Chow</ion-select-option>
+            <ion-select-option value="Pekingese">Pekingese</ion-select-option>
+            <ion-select-option value="Husky">Husky</ion-select-option>
+            <ion-select-option value="Corgi">Corgi</ion-select-option>
+          </ion-select>
+        </ion-item>
+        
+        
+        <ion-item>
+          <ion-thumbnail id="dog" slot="end">
+            <img src={{dog.image}}>
+          </ion-thumbnail>
+          <ion-label>{{dog.name}}, {{dog.breed}}</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-button (click)="setUpdatedDogData()">See how it looks</ion-button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail id="dog" slot="end">
+              <img id = "updatedDogImg" src={{updatedDog.image}}>
+            </ion-thumbnail>
+            <ion-label>{{updatedDog.name}}, {{updatedDog.breed}}</ion-label>
+          </ion-item>
+        <ion-item>
+          <ion-button id="addUpdatedDogButton"(click)="addUpdatedDog()">Add updated dog</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button href="">
+              Back to main page
+          </ion-button>
+        </ion-item>
+    
+    
+      </ion-list>
+</ion-content>
